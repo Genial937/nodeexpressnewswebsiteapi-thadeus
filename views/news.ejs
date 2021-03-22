@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Node.js news website api</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="stylesheets/styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header__logo"><a href="/" class="header__link">Node Js News</a></div>
+        <div class="header__search">
+          <form action="/" method="POST">
+            <input type="text" name="search" placeholder="search" required>
+            <input type="submit" value="Search">
+          </form>
+        </div>
+    </header>
+    
+    <div class="wrapper">
+        <div class="news">
+            <% articles.forEach(function(article, index){%>
+                <a href="/article/<%- article.id %>" class="news__card">
+                    <img src="<%- article.thumbnail_url %>" alt="<%- article.title.rendered %>">
+                    <h2><%- article.title.rendered %></h2>
+                    <p><%- article.excerpt.rendered %></p>
+                    full stack
+                </a>
+            <% })%>
+        </div>
+    </div>
+</body>
+</html>

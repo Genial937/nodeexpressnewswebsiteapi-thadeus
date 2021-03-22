@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Node.js news website api</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/stylesheets/styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header__logo"><a href="/" class="header__link">Node Js News</a></div>
+        <div class="header__search">
+          <input type="text" placeholder="search">
+          <input type="submit" >
+        </div>
+    </header>
+    
+    <div class="wrapper">
+        <div class="news-single">
+            <img src="<%- article.thumbnail_url %>" alt="<%- article.title.rendered %>">
+            <h2><%- article.title.rendered %></h2>
+            <p><%- article.excerpt.rendered %></p>
+            <p><%- article.content.rendered %></p>
+        </div>
+    </div>
+</body>
+</html>
